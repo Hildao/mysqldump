@@ -51,3 +51,39 @@ LOCK TABLES `Tasks` WRITE;
 INSERT INTO `Tasks` VALUES (1,'Wash the dishes','2020-04-12',1,1),(2,'Learn React','2020-04-12',1,1),(3,'Call the Dentist','2020-04-13',1,1),(4,'Wash hair','2020-04-14',1,1),(5,'Clean the cupbord','2020-04-12',1,2),(6,'Do the Laundry','2020-04-13',0,2),(7,'Buy wedding dress','2020-04-14',0,2),(8,'Buy wedding dress','2020-04-13',0,2),(9,'Wash the dog','2020-04-15',0,3),(10,'Wash the car','2020-04-15',0,3),(11,'Shop for grocery','2020-04-15',0,3),(12,'Buy ticket to France','2020-04-15',0,3);
 /*!40000 ALTER TABLE `Tasks` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `Users`
+--
+
+DROP TABLE IF EXISTS `Users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Users` (
+  `UserId` int(11) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`UserId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Users`
+--
+
+LOCK TABLES `Users` WRITE;
+/*!40000 ALTER TABLE `Users` DISABLE KEYS */;
+INSERT INTO `Users` VALUES (1,'posh01'),(2,'ladygaga'),(3,'Jack22');
+/*!40000 ALTER TABLE `Users` ENABLE KEYS */;
+UNLOCK TABLES;
+SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-04-22 11:40:36
